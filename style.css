@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    height: 300px;
+    width: 300px;
+    background-color: rgb(50, 55, 60);
+    border-radius: 300px;
+    border: 3px solid rgb(73, 80, 87);
+    box-shadow: 0px 0px 30px rgb(3, 3, 3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock>span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+
+.clock>span>b {
+    transform: rotate(calc(-30deg* var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin: 149px;
+}
+
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 151px;
+}
+
+.hand>i {
+    position: absolute;
+    height: var(--h);
+    width: 1px;
+    background-color: var(--clr);
+    border-radius: 2px;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+}
+.input-box >.openBtn {
+    background-color: rgb(53, 101, 101);
+    color: #ffffff;
+    font-size: 22px;
+    border-radius: 4px;
+    cursor: grab;
+    height: 40px;
+    width: 200px;
+}
+.input-box button:hover{
+    color: aqua;
+    background-color: cadetblue;
+}
+
